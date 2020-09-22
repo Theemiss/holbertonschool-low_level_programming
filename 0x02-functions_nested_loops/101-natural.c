@@ -7,7 +7,7 @@
 int main(void)
 {
 int a, b, s, x, y;
- s = 0;
+s = 0;
 for (a = 0; a <= (1024  / 3); a++)
 {
 y = a * 3;
