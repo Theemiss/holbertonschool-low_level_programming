@@ -10,16 +10,16 @@ int main(void)
 int a, b, s, i;
 a = 1;
 b = 2;
-s = 0;
-for (i = 0; i < 50; i++)
+s = 3;
+printf("%i, ", a);
+printf("%i, ", b);
+for (i = 3; i < 50; i++)
 {
-s = a + b;
+printf("%i, ", s);
 a = b;
 b = s;
-printf("%i", s);
-putchar(',');
-putchar(' ');
+s = a + b;
 }
-printf("\n");
+printf("%i\n", s);
 return (0);
 }
