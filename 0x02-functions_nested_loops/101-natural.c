@@ -10,11 +10,15 @@ int a, b, s;
 s = 0;
 a = 0;
 b = 0;
-while ((a < 1024) && (b < 1024))
+while (a < 1024)
 {
-a = a + 3;
-b = b + 5;
-s = a + b;
+ s = s + a;
+ a = a + 3;
 }
+ while (b < 1024)
+   {
+     s = s + b;
+     b = b + 5; 
+   }
 printf("%i\n", s);
 }
