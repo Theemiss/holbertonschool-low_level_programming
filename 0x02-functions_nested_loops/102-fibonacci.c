@@ -16,7 +16,9 @@ for (i = 0; i < 50; i++)
 s = a + b;
 a = b;
 b = s;
-printf("%i, ", s);
+printf("%i", s);
+putchar(',');
+putchar(' ');
 }
 printf("\n");
 return (0);
