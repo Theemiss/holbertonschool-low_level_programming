@@ -2,19 +2,19 @@
 /**
  * main - count multiple.
  *
- * return void
+ * Return:void
  */
-int main (void)
+int main(void)
 {
-int a, b ,s;
+int a, b, s;
 s = 0;
 a = 0;
 b = 0;
-while( s < 1024)
+while ((a < 1024) && (b < 1024))
 {
 a = a + 3;
 b = b + 5;
 s = a + b;
 }
-printf("%i\n",s);
+printf("%i\n", s);
 }
