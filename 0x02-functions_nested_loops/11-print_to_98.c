@@ -2,8 +2,8 @@
 #include<stdio.h>
 
 /**
- * main - check the code for Holberton School students.
- *
+ * print_to_98 - count from n to 98.
+ *@n:integer.
  * Return: Always 0.
  */
 void print_to_98(int n)
