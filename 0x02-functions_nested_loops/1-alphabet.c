@@ -1,8 +1,7 @@
 #include "holberton.h"
 
-
 /**
- * print alphabet - check the code for Holberton School students.
+ * print_alphabet - check the code for Holberton School students.
  * Description: Prints the alphabet with _putchar
  * Return: Always 0.
  */
