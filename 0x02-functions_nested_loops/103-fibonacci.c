@@ -14,12 +14,10 @@ k = 2;
 for (s = 2; s <= 32; s++)
 {
 if (y % 2 == 0)
-{
 k = k + s;
 i = j;
 j = y;
 y = i + j;
-}
 }
 printf("%u\n", k);
 return (0);
