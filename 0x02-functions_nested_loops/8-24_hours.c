@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
+ * jack_bauer - display time 24h.
  *
  * Return: Always 0.
  */
