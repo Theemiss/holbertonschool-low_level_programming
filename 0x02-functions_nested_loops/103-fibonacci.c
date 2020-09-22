@@ -14,7 +14,7 @@ k = 2;
 for (s = 2; s <= 32; s++)
 {
 if (y % 2 == 0)
-k = k + s;
+k = k + y;
 i = j;
 j = y;
 y = i + j;
