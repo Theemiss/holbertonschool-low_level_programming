@@ -8,17 +8,21 @@
 
 int _atoi(char *s)
 {
-int num = 0;
-char digit;
+int i, j, n, x;
 
-while ((digit = *s++) != '\0')
-{
-if (digit < '0' && digit > '9')
-{
-return (num);
-}
-num *= 10;
-num +=  digit - '0';
-}
-return (num);
+	i = n = 0;
+	x = 1;
+	while ((s[i] < '0' || s[i] > '9') && (s[i] != '\0'))
+	{
+		if (s[i] == '-')
+			x *= -1;
+		i++;
+	}
+	j = i;
+	while ((s[j] >= '0') && (s[j] <= '9'))
+	{
+		n = n * 10 + x * s[j] - '0';
+		j++;
+	}
+	return (n);
 }
