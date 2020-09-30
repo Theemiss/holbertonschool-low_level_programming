@@ -1,18 +1,24 @@
 #include "holberton.h"
 
 /**
- * 
- * 
- * 
+ * _atoi - convert to a int
+ * @s:string
+ * Return:int
  */
 
 int _atoi(char *s)
 {
-    int res = 0; 
+int num = 0;
+char digit;
 
-    for (int i = 0; s[i] != '\0'; ++i) 
-        res = res * 10 + s[i] - '0'; 
-  
-    return res; 
-} 
-
+while ((digit = *s++) != '\0')
+{
+if (digit < '0' && digit > '9')
+{
+return (num);
+}
+num *= 10;
+num +=  digit - '0';
+}
+return (num);
+}
