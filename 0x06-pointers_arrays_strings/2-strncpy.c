@@ -19,4 +19,3 @@ char *s = dest;
 	*dest = '\0';
 	return (s);
 }
-
