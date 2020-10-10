@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - display name of program
+ * main - mul 2 argv
  * @argc:int
  * @argv:string
  * Return:int
@@ -13,6 +13,7 @@ int main(int argc, char *argv[])
 if (argc != 3)
 {
 	printf("Error\n");
+	return (1);
 }
 else
 {

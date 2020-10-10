@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - display name of program
+ * main - display num of arg
  * @argc:int
  * @argv:string
  * Return:int
