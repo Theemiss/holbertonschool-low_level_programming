@@ -2,25 +2,29 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- **array_range - a function that creates an array of integers.
- *@min : int
- *@max : int
- *Return: pointer to array of integer
+ **_realloc -  a function that reallocates a memory block using malloc and free
+ *@ptr : pointer
+ *@old_size : int
+ *@new_size : int
+ *Return: pointer
  */
-int *array_range(int min, int max)
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	int *p;
-	int i, j = 0;
+	char *tmp;
 
-	if (min > max)
-	return (NULL);
-	p = malloc((max - min + 1) * sizeof(int));
-	if (p == NULL)
-	return (NULL);
-	for (i = min; i <= max; i++)
+	if (new_size == old_size)
+	return (ptr);
+	if (new_size == 0 && ptr != NULL)
 	{
-		p[j] = i;
-		j++;
+		free(ptr);
+		return (NULL);
 	}
-	return (p);
+	if (ptr == NULL)
+	{
+		ptr = malloc(new_size);
+		return (ptr);
+	}
+	tmp = malloc(new_size);
+free(ptr);
+return (tmp);
 }
