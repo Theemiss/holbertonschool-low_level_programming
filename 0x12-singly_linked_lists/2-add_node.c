@@ -16,7 +16,7 @@ unsigned int _strlen(char *s)
 return (i);
 }
 /**
- * add_node - adding node 
+ * add_node - adding node
  * @head:last node list
  * @str:string
  * Return:new node created
@@ -26,12 +26,12 @@ list_t *add_node(list_t **head, const char *str)
 	list_t *new;
 
 if (str == NULL)
-	return(NULL);
-new = malloc (sizeof(list_t));
-if (new == NULL)
-		return (NULL);
+	return (NULL);
+new = malloc(sizeof(list_t));
+	if (new == NULL)
+			return (NULL);
 new->str = strdup(str);
-if (new->str == NULL)
+	if (new->str == NULL)
 	{
 		free(new);
 		return (NULL);
@@ -39,5 +39,5 @@ if (new->str == NULL)
 new->len = _strlen(new->str);
 new->next = *head;
 *head = new;
-return(new);
+return (new);
 }
