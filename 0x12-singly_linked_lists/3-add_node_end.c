@@ -16,10 +16,10 @@ unsigned int _strlen(char *s)
 return (i);
 }
 /**
- * add-node_end - add new node at the end of the list 
+ * add_node_end - add new node at the end of the list
  * @head:pointer to ponter to lined list
- * @str : ponter to string inside the list 
- * Return:pointer to a node at the end of the list 
+ * @str : ponter to string inside the list
+ * Return:pointer to a node at the end of the list
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
@@ -47,7 +47,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	last = *head;
 		while (last->next)
 		{
-		last = last->next;	
+		last = last->next;
 		}
 	last->next = new;
 	}
