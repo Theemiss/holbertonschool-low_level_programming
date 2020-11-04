@@ -13,7 +13,6 @@ c = head;
 while (c != NULL)
 {
 	check = c->next;
-	free(c->n);
 	free(c);
 	c = check;
 }
