@@ -16,10 +16,10 @@ int _strlen(const char *s)
 return (i);
 }
 /**
- * 
- * 
- * 
- * 
+ * binary_to_unit - convert binary to unsigned int
+ * @b:string from 0 and 1 else NULL
+ *
+ * Return:unsigned int
  */
 unsigned int binary_to_uint(const char *b)
 {
