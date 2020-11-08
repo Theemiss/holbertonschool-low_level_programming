@@ -6,13 +6,13 @@ Thank you For Checking My Project
 ## Table of Contents
 * [About](#about)
 * [Requirements](#requirements)
-* [Table of content](#table of content)
+* [Table of content](##Project)
 * [Author](#Author)
 
 # About
 This repository contains C programing language  Project
 
-## Requirments
+## Projects
 * Ubuntu 14.4 LTS
 * gcc 4.8.4
 * Your own main function
@@ -42,4 +42,8 @@ This repository contains C programing language  Project
 
 
 # Author
-Ahmed Belhaj
+Ahmed Belhaj* Ahmed Belhaj <[Theemiss](https://github.com/Theemiss)>
+
+<p align="center">
+  <img src="http://www.holbertonschool.com/holberton-logo.png" alt="Holberton School logo">
+</p>
