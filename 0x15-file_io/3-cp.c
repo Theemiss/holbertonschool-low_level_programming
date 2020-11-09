@@ -12,7 +12,7 @@ int main(int ac, char *av[])
 	int fd2, ww, cw2;
 	char *buff = malloc(sizeof(char) * 1024);
 
-	if (ac != 3)
+	if (ac != 2)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
