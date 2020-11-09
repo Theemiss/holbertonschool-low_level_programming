@@ -1,51 +1,81 @@
 #include "holberton.h"
 
 /**
- * main - copy content of file to another
- * @ac:number of args
- * @av:argument passed to function
- *  Return:0
+ * cp - copies src to desinations
+ * @file_to: the destination file
+ * @file_from: the source file
+ *
+ * Return: integer
  */
-int main(int ac, char *av[])
+int cp(char *file_to, char *file_from)
 {
-	int fd, rw, cw, l;
-	int fd2, ww, cw2;
-	char *buff = malloc(sizeof(char) * 1024);
+	char *buffer[1024];
+	int td, fd, fr, fw;
+	int fc, ftc;
 
-	if (ac != 2)
+	fd = open(file_from, O_RDONLY);
+	if (fd < 0)
+		return (98);
+
+	td = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	if (td < 0)
+		return (99);
+
+	fr = read(fd, buffer, 1024);
+	if (fr < 0)
+		return (98);
+
+	while (fr > 0)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		exit(97);
-	}
-	fd = open(av[1], O_RDONLY);
-	rw = read(fd, buff, 1024);
-	if (fd == -1 || rw == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
-		exit(98);
-	}
-	cw = close(fd);
-	for (l = 0; buff[l] != '\0'; l++)
-	;
-	if (cw == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
-		exit(100);
+		fw = write(td, buffer, fr);
+		if (fw < 0)
+			return (99);
+		fr = read(fd, buffer, 1024);
+		if (fr < 0)
+			return (98);
 	}
 
-	fd2 = open(av[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
-	ww = write(fd2, buff, l);
-	if (fd2 == -1 || ww == -1)
+	fc = close(fd);
+	if (fc < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
-		exit(99);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fc);
+		return (100);
 	}
-	cw2 = close(fd2);
-	if (cw2 == -1)
+	ftc = close(td);
+	if (ftc < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
-		exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ftc);
+		return (100);
 	}
-	free(buff);
 	return (0);
+}
+
+/**
+ * main - the main function
+ * @ac: the argument count
+ * @av: the argument vector
+ *
+ * Return: always 0
+ */
+int main(int ac, char **av)
+{
+	int c;
+
+	if (ac != 3)
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
+
+	c = cp(av[2], av[1]);
+	switch (c)
+	{
+		case (98):
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
+			exit(98);
+		case (99):
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+			exit(99);
+		case (100):
+			exit(100);
+		default:
+			return (0);
+	}
 }
