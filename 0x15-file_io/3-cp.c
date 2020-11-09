@@ -48,4 +48,3 @@ ps = close(fd2);
 	}
 return (0);
 }
-git
