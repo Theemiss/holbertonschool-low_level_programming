@@ -39,10 +39,10 @@ This repository contains C programing language  Project
 19. [0x12](https://github.com/Theemiss/holbertonschool-low_level_programming/tree/master/0x12-singly_linked_lists) - Singly linked lists
 20. [0x13](https://github.com/Theemiss/holbertonschool-low_level_programming/tree/master/0x13-more_singly_linked_lists) - More singly linked lists
 21. [0x14](https://github.com/Theemiss/holbertonschool-low_level_programming/tree/master/0x14-bit_manipulation) - Bit manipulation
-22. [0x15] (https://github.com/Theemiss/holbertonschool-low_level_programming/tree/master/0x15-file_io) - File IO
-23. [0x17] (https://github.com/Theemiss/holbertonschool-low_level_programming/tree/master/0x17-doubly_linked_lists) - Doubly Linked List
-23. [0x18] (https://github.com/Theemiss/holbertonschool-low_level_programming/tree/master/0x18-dynamic_libraries) - Dynamic Library
-24. [0x1A] (https://github.com/Theemiss/holbertonschool-low_level_programming/tree/master/0x1A-hash_tables) - Hash Table
+22. [0x15](https://github.com/Theemiss/holbertonschool-low_level_programming/tree/master/0x15-file_io) - File IO
+23. [0x17](https://github.com/Theemiss/holbertonschool-low_level_programming/tree/master/0x17-doubly_linked_lists) - Doubly Linked List
+23. [0x18](https://github.com/Theemiss/holbertonschool-low_level_programming/tree/master/0x18-dynamic_libraries) - Dynamic Library
+24. [0x1A](https://github.com/Theemiss/holbertonschool-low_level_programming/tree/master/0x1A-hash_tables) - Hash Table
 
 
 # Author
