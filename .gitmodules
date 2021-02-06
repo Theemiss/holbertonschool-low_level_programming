@@ -1,3 +1,6 @@
 [submodule "printf"]
 	path = printf
 	url = https://github.com/Theemiss/printf.git
+[submodule "monty"]
+	path = monty
+	url = https://github.com/Theemiss/monty
