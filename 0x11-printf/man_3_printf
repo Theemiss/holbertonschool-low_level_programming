@@ -1,0 +1,62 @@
+.TH man 3 "27 October 2020" "0.20" "_printf man page"
+.SH NAME
+.B _printf
+- Formatted output conversion.
+.SH SYNOPSIS
+.B #include "holberton.h"
+
+.B int _printf(const char *
+.I format
+.B , ...)
+.SH DESCRIPTION
+.B _printf()
+Prints to standard output under the control of a 
+.I format
+.SH Return value
+On successful return, these functions return the number of characters printed, excluding the null byte used to end output to strings.
+
+If an output error is encountered, a negative value is returned.
+.SH Format
+.TP
+.BR c
+The int argument is converted to an unsigned char, then the resulting character is written
+.TP
+.B s
+The const char * argument is expected to be a pointer to an array of character type (pointer to a string). Characters from the array are written up to a terminating null byte, but do ot include the terminating null byte.
+.TP
+.B S
+Prints a string. Non printable characters are printed as "\x" followed by their ASCII values in two digit hexadecimal
+.TP
+.B d, i
+The int argument is converted to signed decimal notation.
+.TP
+.B x, X
+The unsigned int argument is converted to unsigned lowercase hexadecimal notation(x), or unsigned uppercase hexadecimal notation(X).
+.TP
+.B u
+The unsigned int argument is converted to unsigned decimal notation
+.TP
+.B o, b
+The unsigned int argument is converted to unsigned octal notation(o) or binary notation(b).
+.TP
+.B p
+Address is printed in hexadecimal.
+.TP
+.B r
+Prints a string in reverse.
+.TP
+.B R
+Prints a string converted to rot13
+.TP
+.B %
+A '%' is written but no argument is converted. The complete version specification is '%%'
+.SH EXAMPLE
+#include "holberton.h"
+
+_printf("%s", "my name",);
+.SH SEE ALSO
+.I printf(3)
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Ahmed Belhaj,Wael Ben Hassen
