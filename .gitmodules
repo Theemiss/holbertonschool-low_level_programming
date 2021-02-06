@@ -4,3 +4,6 @@
 [submodule "monty"]
 	path = monty
 	url = https://github.com/Theemiss/monty
+[submodule "simple_shell"]
+	path = simple_shell
+	url = https://github.com/Theemiss/simple_shell.git
